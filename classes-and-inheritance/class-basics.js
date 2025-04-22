@@ -62,7 +62,7 @@ mapleBaconBar.toppings.push("pecans"); // because toppings is an array
 console.log(mapleBaconBar); // now all three toppings show up
 
 // TODO: What's your favorite type of unbelievably fattening, sugary deliciousness?
-
+// ANSWER: double chocolate cake
 
 
 /**** OPTIONAL PARAMETERS ****/
@@ -99,8 +99,17 @@ console.log(mansionOnMainStreet);
 
 
 // TODO: Pretend you're a realtor. Create 3-4 more houses, some with and some without optional parameters
+let hauntedVictorian = new HouseForSale("single-family", 1875, 166600, 2100, 4, 2, false);
+console.log(hauntedVictorian); // ghosts not included (or maybe they are)
 
+let downtownLoft = new HouseForSale("condo", 2020, 375000, 1300, 2, 2, true, false);
+console.log(downtownLoft); // exposed brick + bad parking
 
+let shotgunHouse = new HouseForSale("single-family", 1933, 99000, 820, 2, 1);
+console.log(shotgunHouse); // compact and affordable
+
+let mcmansion = new HouseForSale("single-family", 2008, 589000, 3800, 5, 4, true, true);
+console.log(mcmansion); // big, boxy, and beige
 
 /**** CLASS METHODS ****/
 
@@ -147,8 +156,25 @@ yellowBellPepper.calculateTotal(5); // 5 peppers
 
 // TODO: What's going in your dinner salad tonight? Create 3-4 more objects, then call 
 // describe() and calculateTotal() for each
+let redOnion = new Produce("red onion", "vegetable", "each", 0.89);
+redOnion.describe();
+redOnion.calculateTotal(2);
+// FUN FACT: These are gross.
 
+let cherryTomatoes = new Produce("cherry tomatoes", "fruit", "pint", 2.99);
+cherryTomatoes.describe();
+cherryTomatoes.calculateTotal(1);
+// FUN FACT: These are gross.
 
+let babySpinach = new Produce("baby spinach", "leafy green", "bag", 3.49);
+babySpinach.describe();
+babySpinach.calculateTotal(1);
+// FUN FACT: These are gross.
+
+let blueCheeseCrumbles = new Produce("blue cheese crumbles", "dairy", "container", 4.25);
+blueCheeseCrumbles.describe();
+blueCheeseCrumbles.calculateTotal(1);
+// FUN FACT: These are... wait for it... gross.
 
 /**** TIME TO FLY SOLO ****/
 
@@ -160,18 +186,29 @@ yellowBellPepper.calculateTotal(5); // 5 peppers
 	Write a method outside the constructor called describe() that incorporates all three properties into a sentence and prints it to the console. Remember the syntax you must use to reference the properties that are inside the constructor.
 */
 
+// TODO: Instrument class — let’s get musical
+class Instrument {
+	constructor(name, category, soundsLike) {
+		this.name = name;
+		this.category = category;
+		this.soundsLike = soundsLike;
+	}
 
+	describe() {
+		console.log(`The ${this.name} is a ${this.category} instrument that sounds like ${this.soundsLike}.`);
+	}
+}
 
 // TODO: Once your class is complete, un-comment the lines below to test it out.
 
-// let violin = new Instrument("violin", "string", "a whirlwind romance -- and the inevitable heartbreak that follows after");
-// violin.describe();
+let violin = new Instrument("violin", "string", "a whirlwind romance -- and the inevitable heartbreak that follows after");
+violin.describe();
 
-// let tuba = new Instrument("tuba", "brass", "Mr. Snuffleupagus trying to dance");
-// tuba.describe();
+let tuba = new Instrument("tuba", "brass", "Mr. Snuffleupagus trying to dance");
+tuba.describe();
 
-// let ukelele = new Instrument("ukelele", "string", "Barney and the Teletubbies got drunk and filmed a Hawaiian special together");
-// ukelele.describe();
+let ukelele = new Instrument("ukelele", "string", "Barney and the Teletubbies got drunk and filmed a Hawaiian special together");
+ukelele.describe();
 
-// let bagpipe = new Instrument("bagpipe", "woodwind", "200 third-graders had a recorder recital next to a turbojet engine roaring at full throttle");
-// bagpipe.describe();
+let bagpipe = new Instrument("bagpipe", "woodwind", "200 third-graders had a recorder recital next to a turbojet engine roaring at full throttle");
+bagpipe.describe();
